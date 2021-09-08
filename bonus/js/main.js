@@ -2,6 +2,9 @@ Vue.config.devtools = true;
 
 const app = new Vue({
    el: "#root",
+   mounted: function () {
+      this.startRotation(); //method1 will execute at pageload
+   },
    data: {
       counterPhoto: 0,
       photos: [
@@ -10,6 +13,7 @@ const app = new Vue({
          "img/image3.jpg",
          "img/image4.jpg",
       ],
+      timer: null,
    },
    methods: {
       prevPhoto() {
@@ -23,6 +27,9 @@ const app = new Vue({
          if (this.counterPhoto > this.photos.length - 1) {
             this.counterPhoto = 0;
          }
+      },
+      startRotation() {
+         this.timer = setInterval(this.nextPhoto, 2000);
       },
    },
 });

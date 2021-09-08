@@ -12,18 +12,19 @@
          referrerpolicy="no-referrer"
       />
       <link rel="stylesheet" href="css/style.css" />
+      <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
       <title>Vue Slider</title>
    </head>
    <body>
       <div id="root" class="container">
          <div class="slider">
-            <div class="prev">
+            <div class="prev" @click="prevPhoto()">
                <i class="fas fa-chevron-left"></i>
             </div>
             <div class="images">
-               <img src="img/image1.jpg" alt="" />
+               <img :src="photos[counterPhoto]" alt="" />
             </div>
-            <div class="next">
+            <div class="next" @click="nextPhoto()">
                <i class="fas fa-chevron-right"></i>
             </div>
          </div>

@@ -27,6 +27,13 @@
             <div class="next" @click="nextPhoto()">
                <i class="fas fa-chevron-right"></i>
             </div>
+            <div class="nav">
+               <i
+                  :class="(index == counterPhoto) ? 'active' : ''"
+                  class="fas fa-circle"
+                  v-for="(photo, index) in photos"
+               ></i>
+            </div>
          </div>
       </div>
 

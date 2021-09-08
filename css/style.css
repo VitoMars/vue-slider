@@ -12,6 +12,7 @@
 }
 
 .slider {
+   position: relative;
    display: flex;
    justify-content: space-around;
    align-items: center;
@@ -30,4 +31,21 @@
    color: grey;
    font-size: 50px;
    cursor: pointer;
+}
+
+.nav {
+   position: absolute;
+   bottom: 5%;
+   padding: 20px;
+   border-radius: 30px;
+   background: rgba(0, 0, 0, 0.7);
+   color: white;
+}
+
+.nav i {
+   margin: 0px 20px;
+}
+
+.nav i.active {
+   color: blue;
 }

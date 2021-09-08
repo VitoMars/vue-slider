@@ -2,8 +2,8 @@ Vue.config.devtools = true;
 
 const app = new Vue({
    el: "#root",
-   mounted: function () {
-      this.startRotation(); //method1 will execute at pageload
+   mounted() {
+      this.startRotation();
    },
    data: {
       counterPhoto: 0,
